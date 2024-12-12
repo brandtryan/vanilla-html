@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'Ikarus';
+	src: url('./ABCIkarusv170-VariableVF.ttf') format('truetype-variations');
+	font-style: normal;
+	font-display: swap;
+	font-synthesis: none;
+	unicode-range: U+00-7F, U+2014;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: Ikarus, 'Times New Roman', Times, serif;
+	font-feature-settings: "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1, "case" 1, "liga" 1, "ss04" 1, "ss03" 1, "ss02" 1, "ss08" 1, "ss10" 1, "ss14" 1, "ss18" 1;
+	font-variation-settings: "wght" 300, "wdth" 100, "ital" 0, "cont" 0;
+	font-size: 2.2rem;
+	font-style: normal;
+	background: #333;
+	color: whitesmoke;
+	line-height: 3.56rem;
+
+}
+
+div {
+	/* contain-intrinsic-inline-size: 50ch auto; */
+	content-visibility: auto;
+	margin: auto 0;
+	container-type: size;
+	container-name: plate;
+	contain-intrinsic-block-size: auto 50ch;
+}
+
+.plate {
+
+}
+
+.para {
+
+}
+
+.line {
+	display: block;
+}

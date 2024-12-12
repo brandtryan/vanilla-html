@@ -1,0 +1,108 @@
+
+@font-face {
+	font-family: 'ikarus';
+	src: url('./abcikarusv170-variablevf.ttf') format('truetype-variations');
+	font-style: normal;
+	font-display: swap;
+	font-synthesis: none;
+	unicode-range: u+00-7f, u+2014;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+body {
+	font-family: ikarus, 'times new roman', times, serif;
+	font-feature-settings: "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1, "case" 1, "liga" 1, "ss04" 1, "ss03" 1, "ss02" 1, "ss08" 1, "ss10" 1, "ss14" 1, "ss18" 1;
+	font-variation-settings: "wght" 300, "wdth" 100, "ital" 0, "cont" 0;
+	font-size: 1.125rem;
+	font-style: normal;
+	background: #000;
+	color: #222;
+	line-height: 1.6;
+	text-align: left;
+}
+
+.main {
+	padding-block: 20vh;
+	display: grid;
+	gap: 3rem;
+}
+
+/* .super-simple-example > .container { */
+	/* allows looking at width of .super-simple-example .container and do stuff with it */
+	/* container-type: inline-size; */
+
+	/* margin-inline: auto;
+	width: 100%;
+	padding: 2rem;
+	border: 5px solid hsl(0 0% 95% / 0.2); */
+	
+/* } */
+
+/* .container[data-type="narrow"] {
+	max-width: 350px;
+}
+
+.container[data-type="medium"] {
+	max-width: 600px;
+}
+
+.container[data-type="wide"] {
+	max-width: 850px;
+}
+
+.super-simple-example p {
+	padding: 0.5em;
+	background: #bc89f1;
+	color: #222; */ 
+
+/* always looks at width */
+	/* font-size: 5cqw; */
+
+/* always looks at inline-size */
+	/* font-size: 5cqi; */
+
+/* set clamp */
+	/* font-size: clamp(1rem, 4cqi + .5rem, 2.5rem);
+	line-height: clamp(1.1, 7.5cqi, 1.6);
+
+} */
+ 
+
+
+/* container-type SIZE */
+	/* you HAVE to declare a HEIGHT */
+
+.main > .container {
+	/* allows looking at width of .super-simple-example .container and do stuff with it */
+	container-type: size;
+	/* margin-inline: auto; */
+	height: 50vh;
+	width: 80ch;
+	padding: 2rem;
+	border: 5px solid hsl(0 0% 95% / 0.2);
+	place-content: center;
+	
+}
+
+.main p {
+	/* max-width: 500px; */
+	/* max-height: 500px; */
+	padding: 0.5em;
+	background: #bc89f1;
+	color: #222;
+
+/* always looks at width */
+	/* font-size: 5cqw; */
+
+/* always looks at inline-size */
+	/* font-size: 5cqi; */
+
+/* set clamp */
+	font-size: clamp(5cqb, 9cqb, 11cqb);
+	line-height: clamp(1.1, 1.5, 1.6);
+}
+
