@@ -14,32 +14,40 @@ html {
 body {
 	background: #333;
 	color: whitesmoke;
-	font-size: clamp(1.6rem, 1.9rem, 2.2rem);
 	font-family: Ikarus, 'Times New Roman', Times, serif;
 	font-feature-settings: "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1, "case" 1, "liga" 1, "ss04" 1, "ss03" 1, "ss02" 1, "ss08" 1, "ss10" 1, "ss14" 1, "ss18" 1;
 	font-variation-settings: "wght" 300, "wdth" 100, "ital" 0, "cont" 0;
 	font-size: 1.6rem;
 	font-style: normal;
-	line-height: clamp(2.4rem, 2.75rem, 3.3rem);
-	margin: 0 auto;
-	width: 50ch;
-	height: 50rem;
+	/* text-align: left; */
+	white-space: nowrap;
+}
+
+main {
+	width: 60ch;
+	margin: 0 auto
 
 }
 
-.plate {
+div {
+	display:grid;
+}
+
+p {
+	content-visibility: auto;
+	contain-intrinsic-size: 60ch 50rem;
 	border: 1px solid red;
 	background: dodgerblue;
-	display:grid;
-
+	font-size: clamp(1.6rem, 1.9rem, 2.2rem);
+	line-height: clamp(2.4rem, 2.75rem, 3.3rem);
 
 }
 
-.para {
-	content-visibility: auto;
-	margin: 0 auto
-}
-
-.line {
+p > span {
 	display: block;
 }
+
+/* body > main > article {
+	content-visibility: auto;
+	contain-intrinsic-size: 50ch 50rem;
+} */
