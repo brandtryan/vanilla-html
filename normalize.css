@@ -24,9 +24,9 @@ ol[role="list"] {
 }
 
 /* Set core body defaults */
-/* body {
+body {
 	min-height: 100vh;
-} */
+}
 
 /* Set shorter line heights on headings and interactive elements */
 h1, h2, h3, h4, button, input, label {
