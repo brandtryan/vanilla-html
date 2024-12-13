@@ -21,11 +21,11 @@ body {
 	font-style: normal;
 	/* text-align: left; */
 	white-space: nowrap;
+	margin: 0 auto;
+	width: 50ch;
 }
 
 main {
-	width: 60ch;
-	margin: 0 auto
 
 }
 
