@@ -14,7 +14,7 @@ html {
 
 body {
 	background: #111;
-	color: blanchedalmond;
+	/* color: blanchedalmond; */
 	font-family: Ikarus, 'Times New Roman', Times, serif;
 	font-feature-settings: "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1, "case" 1, "liga" 1, "ss04" 1, "ss03" 1, "ss02" 1, "ss08" 1, "ss10" 1, "ss14" 1, "ss18" 1;
 	font-variation-settings: "wght" 300, "wdth" 100, "ital" 0, "cont" 0;
@@ -24,30 +24,39 @@ body {
 	/* margin: 0 auto; */
 }
 
+.plate {
+	content-visibility: auto;
+	/* contain-intrinsic-size: auto 50ch auto 95vh; */
+
+}
+
 main {
 	padding-block: 20vh;
 	display: grid;
 	place-items: center;
-	/* gap: 4.8rem */
+	gap: 20rem
 }
 
 main > section {
 	content-visibility: auto;
-	container-type: inline-size;
-	max-width: 60rem;
+	contain-intrinsic-size: auto 50ch auto 95vh;
+	/* max-width: 60rem; */
 
-	margin-inline: auto;
-	width: 100%;
+	/* margin-inline: auto; */
+	/* width: 100%; */
 	/* padding: 3.2rem; */
-	border: 1px solid hsl(0 0% 95% / 0.2);
+	/* outline: 4px dotted royalblue; */
 }
 
-main p {
+p {
+	/* height: 60cqw; */
+	height: 60cqh;
+	width: 60cqw;
+	border: 4px dotted;
 	/* padding: 0.5em; */
-	background: hsl(273, 60%, 68%);
-	color: #222;
+	color: #fff;
 
-	font-size: 5.6cqi;
+	font-size: 2.3cqw;
 }
 
 p > span {
