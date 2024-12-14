@@ -13,7 +13,7 @@ html {
 }
 
 body {
-	background: #333;
+	background: #111;
 	color: blanchedalmond;
 	font-family: Ikarus, 'Times New Roman', Times, serif;
 	font-feature-settings: "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1, "case" 1, "liga" 1, "ss04" 1, "ss03" 1, "ss02" 1, "ss08" 1, "ss10" 1, "ss14" 1, "ss18" 1;
@@ -25,30 +25,31 @@ body {
 }
 
 main {
-	font-size: 2.2rem;
+	padding-block: 20vh;
+	display: grid;
+	place-items: center;
+	/* gap: 4.8rem */
 }
 
-body > main > section {
+main > section {
 	content-visibility: auto;
-	/* contain-intrinsic-size: auto 600px; */
 	container-type: inline-size;
-	/* margin: 0 auto; */
+	max-width: 60rem;
+
+	margin-inline: auto;
+	width: 100%;
+	/* padding: 3.2rem; */
+	border: 1px solid hsl(0 0% 95% / 0.2);
 }
 
-p {
-	width: 50ch;
-	contain-intrinsic-size: 50ch 50rem;
-	margin: 0 auto;
-	font-size: clamp(1.6rem, 1.9rem, 2.2rem);
-	line-height: clamp(2.4, 2.85, 3.3);
+main p {
+	/* padding: 0.5em; */
+	background: hsl(273, 60%, 68%);
+	color: #222;
 
+	font-size: 5.6cqi;
 }
 
 p > span {
 	display: block;
 }
-
-/* body > main > article {
-	content-visibility: auto;
-	contain-intrinsic-size: 50ch 50rem;
-} */

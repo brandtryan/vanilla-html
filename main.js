@@ -1,6 +1,13 @@
-import { htmlString } from "./htmlString.mjs";
+// import { htmlString } from "./htmlString.mjs";
 
-const html = htmlString;
+const html = `
+<section data-type="narrow"><p>Lorem ipsum dolor sit amet.</p>
+</section>
+<section data-type="medium"><p>Lorem ipsum dolor sit amet.</p>
+</section>
+<section data-type="wide"><p>Lorem ipsum dolor sit amet.</p>
+</section>
+`;
 
 const main = document.createElement('main');
 document.body.appendChild(main);
