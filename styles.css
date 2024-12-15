@@ -12,6 +12,7 @@ html {
 }
 
 body {
+	/* border: 5px dotted green; */
 	background: #111;
 	color: blanchedalmond;
 	font-family: Ikarus, 'Times New Roman', Times, serif;
@@ -20,38 +21,53 @@ body {
 	font-size: 1.6rem;
 	font-style: normal;
 	white-space: nowrap;
-	width: 54ch;
-	margin: 0 auto;
+	width: 80ch;
 	display: grid;
+	margin: 0 auto;
 }
 
 main {
 	display: grid;
-	place-items: center;
-	border: 2px solid gold;
-	container: main / inline-size;
-	max-inline-size: 65ch;
-	min-inline-size: 30ch;
-	contain-intrinsic-inline-size: 64ch;
-	place-self: center;
-	padding: 0.2rem;
+	place-content: center;
+	border: 3px dashed gold;
+	width: 75ch;
+	height: 100vh;
+	/* container: main / inline-size; */
+	/* max-inline-size: 65ch; */
+	/* min-inline-size: 30ch; */
+	/* contain-intrinsic-inline-size: 64ch; */
+	/* place-self: center; */
+	/* padding: 0.2rem; */
 }
 
 section {
-	container: section / inline-size;
-	contain-intrinsic-inline-size: 64ch;
-	border: 2px solid lightblue;
-	content-visibility: auto;
+	display: grid;
+	place-content: center;
+	border: 3px dotted lightblue;
+	width: 70ch;
+	height: 100vh;
+
+	/* container: section / inline-size; */
+	/* contain-intrinsic-inline-size: 64ch; */
+	/* content-visibility: auto; */
 }
 
 p {
-	font-size: clamp(1.6rem, 2.9cqi, 2.2rem);
-	line-height: calc(2px + 2ex + 2px);
-	border: 2px solid indianred;
+	display: inline-block;
+	border: 2px dashed indianred;
+	width: 65ch;
+	height:fit-content;
+	line-height: calc((1rem / 5) + 2.5ex + (1rem / 5));
+	/* place-self: center; */
 }
 
 .line {
+	border: 1px solid silver;
+	contain: strict;
+	width: 65ch;
+	height: calc(1.2ex + 1.2cap);
 	display: block ;
+	font-size: clamp(1.6rem, 2.9vw, 2.2rem);
 
 }
 
