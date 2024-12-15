@@ -73,15 +73,15 @@ export const htmlString = `
 <p id='p05' class='para'>
 <span id='p05-ln00' class='line'>At first it was all a big joke—because there was this one guy at</span>
 <span id='p05-ln01' class='line'>the swimming pool—Crazy Charlie—who would bark right</span>
-<span id='p05-ln02' class='line'>before he dove off the high sectione and into the tank. He was an</span>
-<span id='p05-ln03' class='line'>old man and he would do that same damn sectione every time, like</span>
+<span id='p05-ln02' class='line'>before he dove off the high dive and into the tank. He was an</span>
+<span id='p05-ln03' class='line'>old man and he would do that same damn dive every time, like</span>
 <span id='p05-ln04' class='line'>he was trying out for the Olympics or something—but every</span>
 <span id='p05-ln05' class='line'>time his bony hands would hit the water palms up, and his one</span>
 <span id='p05-ln06' class='line'>leg never seemed to be in line with the other one. Then he'd go</span>
 <span id='p05-ln07' class='line'>up the ladder doing these weird twitches, stand at the end of</span>
-<span id='p05-ln08' class='line'>the board, let out a bark, and then sectione again. It wasn't like a</span>
+<span id='p05-ln08' class='line'>the board, let out a bark, and then dive again. It wasn't like a</span>
 <span id='p05-ln09' class='line'>little bark either—it was a huge bark, and everyone always</span>
-<span id='p05-ln10' class='line'>heard it and would look up at his old ass getting ready to sectione,</span>
+<span id='p05-ln10' class='line'>heard it and would look up at his old ass getting ready to dive,</span>
 <span id='p05-ln11' class='line'>and laugh. We imitated him a lot, walking around all the</span>
 <span id='p05-ln12' class='line'>different parts of the pool, barking and twitching and yelling</span>
 <span id='p05-ln13' class='line'>out “Crazy Charlie!”,’cause a lot of times Crazy Charlie himself</span>
@@ -150,7 +150,7 @@ export const htmlString = `
 <span id='p09-ln13' class='line'>I guess it's just because I'm too busy worrying about the flips</span>
 <span id='p09-ln14' class='line'>and somersaults that I'm gonna' do. One time when Abe</span>
 <span id='p09-ln15' class='line'>launched me I did three somersaults before I straightened out</span>
-<span id='p09-ln16' class='line'>for a perfect sectione into the water. I'm thinking I'll tell this to</span>
+<span id='p09-ln16' class='line'>for a perfect dive into the water. I'm thinking I'll tell this to</span>
 <span id='p09-ln17' class='line'>that doctor I'm gonna' see today, since that is practically the</span>
 <span id='p09-ln18' class='line'>only time that I don't do it.</span>
 </p>
@@ -220,7 +220,7 @@ export const htmlString = `
 <p id='p14' class='para'>
 <span id='p14-ln00' class='line'>That's the thing about it—it's like once you start in on it, you've</span>
 <span id='p14-ln01' class='line'>got to get it right. Just like Crazy Charlie and his Olympic</span>
-<span id='p14-ln02' class='line'>sectiones—if it's off by just a little bit you've got to do it again.</span>
+<span id='p14-ln02' class='line'>dives—if it's off by just a little bit you've got to do it again.</span>
 <span id='p14-ln03' class='line'>Especially with the barks—at first everyone can barely hear it,</span>
 <span id='p14-ln04' class='line'>but then I think that they didn't hear it, and so I have to do it</span>
 <span id='p14-ln05' class='line'>again—but then I think that surely they didn't hear that one</span>

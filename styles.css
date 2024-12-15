@@ -9,56 +9,51 @@
 
 html {
 	font-size: 62.5%;
-	/* margin: auto; */
 }
 
 body {
 	background: #111;
-	/* color: blanchedalmond; */
+	color: blanchedalmond;
 	font-family: Ikarus, 'Times New Roman', Times, serif;
 	font-feature-settings: "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1, "case" 1, "liga" 1, "ss04" 1, "ss03" 1, "ss02" 1, "ss08" 1, "ss10" 1, "ss14" 1, "ss18" 1;
 	font-variation-settings: "wght" 300, "wdth" 100, "ital" 0, "cont" 0;
 	font-size: 1.6rem;
 	font-style: normal;
 	white-space: nowrap;
-	/* margin: 0 auto; */
-}
-
-.plate {
-	content-visibility: auto;
-	/* contain-intrinsic-size: auto 50ch auto 95vh; */
-
+	width: 54ch;
+	margin: 0 auto;
+	display: grid;
 }
 
 main {
-	padding-block: 20vh;
 	display: grid;
 	place-items: center;
-	gap: 20rem
+	border: 2px solid gold;
+	container: main / inline-size;
+	max-inline-size: 65ch;
+	min-inline-size: 30ch;
+	contain-intrinsic-inline-size: 64ch;
+	place-self: center;
+	padding: 0.2rem;
 }
 
-main > section {
+section {
+	container: section / inline-size;
+	contain-intrinsic-inline-size: 64ch;
+	border: 2px solid lightblue;
 	content-visibility: auto;
-	contain-intrinsic-size: auto 50ch auto 95vh;
-	/* max-width: 60rem; */
-
-	/* margin-inline: auto; */
-	/* width: 100%; */
-	/* padding: 3.2rem; */
-	/* outline: 4px dotted royalblue; */
 }
 
 p {
-	/* height: 60cqw; */
-	height: 60cqh;
-	width: 60cqw;
-	border: 4px dotted;
-	/* padding: 0.5em; */
-	color: #fff;
-
-	font-size: 2.3cqw;
+	font-size: clamp(1.6rem, 2.9cqi, 2.2rem);
+	line-height: calc(2px + 2ex + 2px);
+	border: 2px solid indianred;
 }
 
-p > span {
-	display: block;
+.line {
+	display: block ;
+
 }
+
+
+
