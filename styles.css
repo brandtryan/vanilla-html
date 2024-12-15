@@ -42,6 +42,8 @@ main {
 
 section {
 	display: grid;
+	content-visibility: auto;
+	container-type: size;
 	place-content: center;
 	border: 3px dotted lightblue;
 	width: 70ch;
@@ -58,11 +60,10 @@ p {
 	width: 65ch;
 	height:fit-content;
 	line-height: calc((1rem / 5) + 2.5ex + (1rem / 5));
-	/* place-self: center; */
 }
 
 .line {
-	border: 1px solid silver;
+	border: 2px solid silver;
 	contain: strict;
 	width: 65ch;
 	height: calc(1.2ex + 1.2cap);
