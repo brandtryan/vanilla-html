@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Ikarus';
-	src: url('./ABCIkarusv170-VariableVF.ttf') format('truetype-variations');
+	src: url('Ikarus.woff2') format('woff2-variations');
 	font-style: normal;
 	font-display: swap;
 	font-synthesis: none;
@@ -27,18 +27,12 @@ body {
 	margin: auto;
 }
 
-main {
-	display: grid;
-	place-content: center;
-	width: 75ch;
-}
-
 section {
-	/* display: grid; */
+	display: grid;
 	content-visibility: auto;
 	container-type: size;
 	place-content: center;
-	width: 70ch;
+	width: 65ch;
 	height: 100vh;
 }
 
