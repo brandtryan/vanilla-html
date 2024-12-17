@@ -81,7 +81,8 @@ body {
 
 .container {
   container-type: inline-size;
-  place-items: center;
+  display: grid;
+  place-content: center;
 }
 
 @container (inline-size > 300px) {
