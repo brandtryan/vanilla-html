@@ -100,12 +100,12 @@ p {
   inline-size: 65ch;
   height: 95cqi;
   margin-block-start: 25cqi;
-  /* place-content: center; */
+  place-content: center;
 }
 
 line-element {
   content-visibility: auto;
-  place-content: center;
+  /* place-content: center; */
   display: block;
   border: 2px dotted skyblue;
   inline-size: 65ch;
