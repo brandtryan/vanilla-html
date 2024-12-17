@@ -1,97 +1,161 @@
 @font-face {
-	font-family: 'Ikarus';
-	src: url('Ikarus.woff2') format('woff2-variations');
-	font-style: normal;
-	font-display: swap;
-	font-synthesis: none;
-	unicode-range: U+00-7F, U+2014;
+  font-family: 'Ikarus';
+  src: url('Ikarus.woff2') format('woff2-variations');
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+  unicode-range: U+00-7F, U+2014;
 }
 
 html {
-	font-size: 62.5%;
-	/* Create animation timeline for progress bar */
-	scroll-timeline: --page-scroll block;
+  font-size: 62.5%;
+  /* height: 100%; */
+  /* Create animation timeline for progress bar */
+  /* scroll-timeline: --page-scroll block; */
+}
+
+:root {
+  --h1-base: 7.04rem;
+  --h2-base: 6.016rem;
+  --h3-base: 1.28rem;
+  --h4-base: 2.944rem;
+}
+
+h1,
+.h1 {
+  --font-size-base: var(--h1-base);
+
+  font-size: var(--h1-base);
+}
+
+h2,
+.h2 {
+  --font-size-base: var(--h2-base);
+  --font-size-fluid: 2.5cqi;
+
+  font-size: var(--h2-base);
+}
+
+h3,
+.h3 {
+  --font-size-base: var(--h3-base);
+  --font-size-fluid: 2.25cqi;
+
+  font-size: var(--h3-base);
+}
+
+h4,
+.h4 {
+  --font-size-base: var(--h4-base);
+  --font-size-fluid: 2cqi;
+
+  font-size: var(--h4-base);
+}
+
+@supports (font-size: 1cqi) {
+  :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, .fluid-type) {
+    font-size: calc(var(--font-size-base) + var(--font-size-fluid, 3cqi));
+  }
+}
+
+@supports (font-size: 1cqi) {
+  .fluid-type {
+    font-size: min(
+      var(--font-size-max),
+      calc(var(--font-size-base) + var(--font-size-fluid, 3cqi))
+    );
+  }
 }
 
 body {
-	background: #111;
-	color: blanchedalmond;
-	font-family: Ikarus, 'Times New Roman', Times, serif;
-	font-feature-settings: "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1, "case" 1, "liga" 1, "ss04" 1, "ss03" 1, "ss02" 1, "ss08" 1, "ss10" 1, "ss14" 1, "ss18" 1;
-	font-variation-settings: "wght" 300, "wdth" 100, "ital" 0, "cont" 0;
-	font-size: 1.6rem;
-	font-style: normal;
-	white-space: nowrap;
-	width: 80ch;
-	display: grid;
-	margin: auto;
+  background: #111;
+  color: blanchedalmond;
+  font-family: Ikarus, 'Times New Roman', Times, serif;
+  font-feature-settings: 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1, 'case' 1,
+    'liga' 1, 'ss04' 1, 'ss03' 1, 'ss02' 1, 'ss08' 1, 'ss10' 1, 'ss14' 1,
+    'ss18' 1;
+  font-variation-settings: 'wght' 300, 'wdth' 100, 'ital' 0, 'cont' 0;
+  font-style: normal;
+  white-space: nowrap;
 }
 
-section {
-	display: grid;
-	content-visibility: auto;
-	container-type: size;
-	place-content: center;
-	width: 65ch;
-	height: 100vh;
+.container {
+  container-type: inline-size;
+  place-items: center;
+}
+
+@container (inline-size > 300px) {
+  .container .child {
+    padding: 2rem;
+  }
+}
+
+.fluid-type {
+  font-size: clamp(1.6rem, 1.6cqi, 2.2rem);
 }
 
 p {
-	display: inline-block;
-	width: 65ch;
-	height:fit-content;
-	line-height: calc((1rem / 5) + 2.5ex + (1rem / 5));
+  border: 1px solid gold;
+  content-visibility: auto;
+  inline-size: 65ch;
+  height: 95cqi;
+  margin-block-start: 25cqi;
+  /* place-content: center; */
 }
 
-.line {
-	contain: strict;
-	width: 65ch;
-	/* height: calc(1.2ex + 1.2cap); */
-	height: 1.6em;
-	display: block ;
-	font-size: clamp(1.6rem, 2.9vw, 2.2rem);
+line-element {
+  content-visibility: auto;
+  place-content: center;
+  display: block;
+  border: 2px dotted skyblue;
+  inline-size: 65ch;
+  /* height: 2.75ch; */
 }
 
 /* Animation */
 
-#progress {
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%;
-	height: 1em;
-	background: crimson;
+/* #progress {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1em;
+  background: crimson;
 
-	transform-origin: 0 50%;
-	animation: grow-progress auto linear;
-	animation-timeline: --page-scroll;
+  transform-origin: 0 50%;
+  animation: grow-progress auto linear;
+  animation-timeline: --page-scroll;
 }
 
 @keyframes grow-progress {
-	from { transform: scaleX(0); }
-	to { transform: scaleX(1); }
-}
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+} */
 
-.revealing-section {
-	/* Create View Timeline */
-	view-timeline-name: --revealing-section;
-	view-timeline-axis: block;
+/* .revealing-div { */
+/* Create View Timeline */
+/* view-timeline-name: --revealing-div; */
+/* view-timeline-axis: block; */
 
-	/* Attach animation, linked to the  View Timeline */
-	animation: linear reveal both;
-	animation-timeline: --revealing-section;
+/* Attach animation, linked to the  View Timeline */
+/* animation: linear reveal both; */
+/* animation-timeline: --revealing-div; */
 
-	/* Tweak range when effect should run*/
-	animation-range: entry 20% cover 40%;
-}
+/* Tweak range when effect should run*/
+/* animation-range: entry 20% cover 40%; */
+/* } */
 
-@keyframes reveal {
-	from {
-		opacity: 0;
-		clip-path: inset(75% 30% 75% 30%);
-	}
-	to {
-		opacity: 1;
-		clip-path: inset(0% 0% 0% 0%);
-	}
-}
-
+/* @keyframes reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(75% 30% 75% 30%);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+} */
