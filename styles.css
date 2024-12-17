@@ -91,7 +91,7 @@ body {
 }
 
 .fluid-type {
-  font-size: clamp(1.6rem, 1.6cqi, 2.2rem);
+  font-size: clamp(1.6rem, 2.3cqi, 2.2rem);
 }
 
 p {
