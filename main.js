@@ -1,8 +1,8 @@
-const lines = document.getElementsByTagName('line-element');
-const lineArray = [...lines];
-console.log(lineArray);
+const paras = document.getElementsByTagName('p');
+const parasArray = [...paras];
+console.log(parasArray);
 
-// let para0 = spansArr.splice(0, 9);
+// let para0 = lineArray.splice(0, 9);
 // let para1 = spansArray.splice(0, 17);
 // let para2 = spansArray.splice(0, 12);
 // let para3 = spansArray.splice(0, 8);
@@ -47,34 +47,34 @@ console.log(lineArray);
 // let para42 = spansArray.splice(0, 5);
 // let para43 = spansArray.splice(0, 5);
 
-// const result = [];
+const result = [];
 
-// for (let span of para0) {
-// 	let words = [];
-// 	let i = 0;
-// 	let j = 0;
-// 	words = span.textContent.split(' ');
+for (let line in lineArray) {
+	let words = [];
+	let i = 0;
+	let j = 0;
+	words = span.textContent.split(' ');
 
-// 	let prefix = '<span ';
+	let prefix = '<span ';
 
-// 	let body = `${span.id}-w${words[i[j]]}>`;
-// 	// 'p00-ln00-w0>'
-// 	let glued1 = prefix.concat('', body);
-// 	// '<span p00-ln00-w0>'
-// 	// let inc = i.toString().concat('', '>');
-// 	// '0>'
-// 	// let glued2 = glued1.concat('', inc);
-// 	// '<span p00-ln00-w0>'
-// 	let end = `${words[i]}</span>`
-// 	span = glued1.concat('', end); // <span p00-ln00-w0>word</span>
+	let body = `${span.id}-w${words[i[j]]}>`;
+	// 'p00-ln00-w0>'
+	let glued1 = prefix.concat('', body);
+	// '<span p00-ln00-w0>'
+	// let inc = i.toString().concat('', '>');
+	// '0>'
+	// let glued2 = glued1.concat('', inc);
+	// '<span p00-ln00-w0>'
+	let end = `${words[i]}</span>`;
+	span = glued1.concat('', end); // <span p00-ln00-w0>word</span>
 
-// 	result.push(span);
-// 	i++;
-// 	j++;
-// }
+	result.push(span);
+	i++;
+	j++;
+}
 
-// for (let i = 0; i < result.length; i++) {
-// 	result[i] = result[i].replace("wundefined", `w${i}`);
-// }
+for (let i = 0; i < result.length; i++) {
+	result[i] = result[i].replace('wundefined', `w${i}`);
+}
 
-// console.log(result);
+console.log(result);
