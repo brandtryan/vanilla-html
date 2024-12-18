@@ -1,8 +1,8 @@
 const paras = document.getElementsByTagName('p');
 const parasArray = [...paras];
-console.log(parasArray);
+// console.log(parasArray);
 
-// let para0 = lineArray.splice(0, 9);
+// let para0 = lineArray.slice(0, 9);
 // let para1 = spansArray.splice(0, 17);
 // let para2 = spansArray.splice(0, 12);
 // let para3 = spansArray.splice(0, 8);
@@ -49,32 +49,68 @@ console.log(parasArray);
 
 const result = [];
 
-for (let line in lineArray) {
+for (let index in parasArray) {
+	// console.log(index, parasArray[index]);
+
 	let words = [];
 	let i = 0;
 	let j = 0;
-	words = span.textContent.split(' ');
 
-	let prefix = '<span ';
+	let sent1 = parasArray[index[i]].textContent.split(' ');
+	// console.log(sent1);
 
-	let body = `${span.id}-w${words[i[j]]}>`;
+	// let words1 = words[0].slice(0, words[0].length);
+	// console.log(para1);
+
+	let prefix = `<span id='p${[index[i]]}-w${[index[i]][j]}'}`;
+	console.log(prefix);
+
+	// let body = `${para.id}-w${words[i[j]]}>`;
 	// 'p00-ln00-w0>'
-	let glued1 = prefix.concat('', body);
+	// let glued1 = prefix.concat('', body);
 	// '<span p00-ln00-w0>'
-	// let inc = i.toString().concat('', '>');
-	// '0>'
-	// let glued2 = glued1.concat('', inc);
-	// '<span p00-ln00-w0>'
-	let end = `${words[i]}</span>`;
-	span = glued1.concat('', end); // <span p00-ln00-w0>word</span>
+	// // let inc = i.toString().concat('', '>');
+	// // '0>'
+	// // let glued2 = glued1.concat('', inc);
+	// // '<span p00-ln00-w0>'
+	// let end = `${words[i]}</span>`;
+	// span = glued1.concat('', end); // <span p00-ln00-w0>word</span>
 
-	result.push(span);
+	// result.push(span);
 	i++;
 	j++;
 }
 
-for (let i = 0; i < result.length; i++) {
-	result[i] = result[i].replace('wundefined', `w${i}`);
-}
+// for (let i = 0; i < result.length; i++) {
+// 	result[i] = result[i].replace('wundefined', `w${i}`);
+// }
 
-console.log(result);
+// console.log(result);
+
+// const result = [];
+
+// for (let index in parasArray) {
+// 	// console.log(index, parasArray[index]);
+
+// 	let words = [];
+// 	let i = 0;
+
+// 	words = parasArray[index].textContent.split(' ');
+// 	// console.log(words);
+
+// 	let prefix = '<span ';
+
+// 	let body = `${para.id}-w${words[i[j]]}>`;
+// 	// 'p00-ln00-w0>'
+// 	let glued1 = prefix.concat('', body);
+// 	// '<span p00-ln00-w0>'
+// 	// // let inc = i.toString().concat('', '>');
+// 	// // '0>'
+// 	// // let glued2 = glued1.concat('', inc);
+// 	// // '<span p00-ln00-w0>'
+// 	// let end = `${words[i]}</span>`;
+// 	// span = glued1.concat('', end); // <span p00-ln00-w0>word</span>
+
+// 	// result.push(span);
+// 	i++;
+// }
