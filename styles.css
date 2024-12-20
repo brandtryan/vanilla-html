@@ -85,6 +85,7 @@ body {
 	font-variation-settings: 'wght' 300, 'wdth' 100, 'ital' 0, 'cont' 0;
 	font-style: normal;
 	white-space: nowrap;
+	margin: 0;
 }
 
 main {
@@ -102,7 +103,7 @@ p {
 	border: 1px solid gold;
 }
 
-.container {
+.paragraph-container {
 	content-visibility: auto;
 	contain-intrinsic-size: 50ch auto;
 }
