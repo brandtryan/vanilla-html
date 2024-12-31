@@ -30,20 +30,24 @@ body {
 main {
 	display: grid;
 	place-items: center;
+	place-self: center;
+	container-type: size;
+	width: 80vw;
+	height: 80vh;
 }
 
-.plate-container {
+section {
 	border: 1px solid gold;
 	margin: 0;
-	margin-block-end: 100%;
 	content-visibility: auto;
-	contain-intrinsic-size: auto 60ch 100cqh;
+	contain-intrinsic-size: 70cqw auto;
+	margin-block-end: 80%;
 }
 
 p {
 	border: 1px dotted dodgerblue;
-	max-width: 60ch;
 }
+
 #p00 {
 	margin-top: 35vh;
 }
