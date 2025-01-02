@@ -7,7 +7,13 @@ export function createPlayer(animations) {
 			animations.forEach((animation) => animation.pause());
 		},
 		currentTime: function (time = 0) {
-			animations.forEach((animation) => (animation.currentTime = time));
+			animations.forEach(function (animation) {
+				if (typeof animation.currentTime === 'function') {
+					animation.currentTime(time);
+				} else {
+					animation.currentTime = time;
+				}
+			});
 		},
 	});
 }

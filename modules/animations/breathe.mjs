@@ -1,3 +1,8 @@
+// "wght"   47    200   900
+// "wdth"   60    60   140
+// "ital"   0    0   12
+// "CONT"   0    100   100
+
 export const breatheFrames = [
 	{
 		fontWeight: 47,
@@ -14,9 +19,10 @@ export const breatheFrames = [
 ];
 
 export const breatheTiming = {
-	delay: 100,
+	delay: 500,
 	direction: 'alternate',
-	duration: 1300,
-	easing: 'cubic-bezier(0.45, 0, 0.55, 1)',
-	iterations: '3',
+	duration: 350,
+	easing: 'ease-in-out',
+	iterations: '2.3',
+	// endDelay: Math.random() * 100,
 };
