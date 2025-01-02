@@ -19,9 +19,9 @@ export const breatheFrames = [
 ];
 
 export const breatheTiming = {
-	delay: 100,
+	delay: 1000,
 	direction: 'alternate',
-	duration: 350,
+	duration: 200,
 	easing: 'ease-in-out',
 	iterations: '2.3',
 	// endDelay: Math.random() * 100,

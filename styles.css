@@ -31,25 +31,27 @@ main {
 	display: grid;
 	place-items: center;
 	place-self: center;
-	container-type: size;
+	/* container-type: size;
 	width: 80vw;
-	height: 80vh;
+	height: 80vh; */
 }
 
 section {
 	border: 1px solid gold;
 	margin: 0;
+	margin-block-end: 50%;
 	content-visibility: auto;
-	contain-intrinsic-size: 70cqw auto;
-	margin-block-end: 80%;
+	contain-intrinsic-size: auto 70ch 0px;
 }
 
 p {
 	border: 1px dotted dodgerblue;
+	content-visibility: auto;
+	contain-intrinsic-size: auto 70ch 0px;
 }
 
 #p00 {
-	margin-top: 35vh;
+	margin-top: 60%;
 }
 
 /* #progress {
