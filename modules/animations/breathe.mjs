@@ -19,7 +19,7 @@ export const breatheFrames = [
 ];
 
 export const breatheTiming = {
-	delay: 500,
+	delay: 100,
 	direction: 'alternate',
 	duration: 350,
 	easing: 'ease-in-out',
