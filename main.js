@@ -19,11 +19,11 @@ import { breatheFrames, breatheTiming } from './modules/animations/breathe.mjs';
 // "ital"   0    0   12
 // "CONT"   0    100   100
 
-const p00ln00 = document.querySelector('#p00-ln00');
-p00ln00.animate(breatheFrames, breatheTiming);
+// const p00ln00 = document.querySelector('#p00-ln00');
+// p00ln00.animate(breatheFrames, breatheTiming);
 
-const p00ln01 = document.querySelector('#p00-ln01');
-p00ln01.animate(breatheFrames, breatheTiming);
+// const p00ln01 = document.querySelector('#p00-ln01');
+// p00ln01.animate(breatheFrames, breatheTiming);
 
 // const p00ln02 = document.querySelector('#p00-ln02');
 // p00ln02.animate(breatheFrames, breatheTiming);
@@ -59,6 +59,5 @@ for (let i = 0; i < p00Animations.length - 1; i++) {
 }
 
 console.log(p00Animations[0]);
-console.log(p00Animations[0].startTime);
 
-allAnimations[0].play();
+// allAnimations[0].play();

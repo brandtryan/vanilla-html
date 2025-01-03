@@ -1,7 +1,7 @@
 /* Typography */
 
 @font-face {
-	font-family: 'Ikarus';
+	font-family: Ikarus;
 	src: url('Ikarus.woff2') format('woff2-variations');
 	font-style: normal;
 	font-display: swap;
@@ -18,7 +18,7 @@ html {
 body {
 	background: #111;
 	color: blanchedalmond;
-	font-family: ikarus, 'times new roman', times, serif;
+	font-family: Ikarus, Arial, Helvetica, sans-serif;
 	font-feature-settings: 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1, 'case' 1, 'liga' 1, 'ss04' 1, 'ss03' 1, 'ss02' 1, 'ss08' 1, 'ss10' 1, 'ss14' 1, 'ss18' 1;
 	font-variation-settings: 'wght' 200, 'wdth' 100, 'ital' 0, 'cont' 0;
 	font-style: normal;
@@ -36,7 +36,7 @@ main {
 	height: 80vh; */
 }
 
-section {
+div.paragraph {
 	border: 1px solid gold;
 	margin: 0;
 	margin-block-end: 50%;
