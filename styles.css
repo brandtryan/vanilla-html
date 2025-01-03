@@ -29,23 +29,23 @@ body {
 
 main {
 	white-space: nowrap;
-	margin-left: 20ch;
+	/* margin-left: 10ch; */
 }
 
 section.page {
-	border: 1px dashed rgb(231, 137, 15);
+	/* border: 1px dashed rgb(231, 137, 15); */
 	margin-block-end: 80%;
 	content-visibility: auto;
-	contain-intrinsic-size: 70ch 0px;
+	contain-intrinsic-size: 65ch 0px;
 }
 
 div.paragraph {
-	border: 1px solid rgb(238, 19, 19);
+	/* border: 1px solid rgb(238, 19, 19); */
 	content-visibility: auto;
 }
 
 p {
-	border: 1px dotted dodgerblue;
+	/* border: 1px dotted dodgerblue; */
 	content-visibility: auto;
 }
 
