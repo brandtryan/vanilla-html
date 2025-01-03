@@ -1,4 +1,5 @@
 import { breatheFrames, breatheTiming } from './modules/animations/breathe.mjs';
+import { twitchFrames, twitchTiming } from './modules/animations/twitch.mjs';
 
 // const progressbar = document.querySelector('#progress');
 // progressbar.style.transformOrigin = '0% 50%';
@@ -19,14 +20,14 @@ import { breatheFrames, breatheTiming } from './modules/animations/breathe.mjs';
 // "ital"   0    0   12
 // "CONT"   0    100   100
 
-// const p00ln00 = document.querySelector('#p00-ln00');
-// p00ln00.animate(breatheFrames, breatheTiming);
+const s00p00ln00 = document.querySelector('#s00-p00-ln00');
+s00p00ln00.animate(breatheFrames, breatheTiming);
 
-// const p00ln01 = document.querySelector('#p00-ln01');
-// p00ln01.animate(breatheFrames, breatheTiming);
+const s00p00ln01 = document.querySelector('#s00-p00-ln01');
+s00p00ln01.animate(breatheFrames, breatheTiming);
 
-// const p00ln02 = document.querySelector('#p00-ln02');
-// p00ln02.animate(breatheFrames, breatheTiming);
+const s00p00ln02 = document.querySelector('#s00-p00-ln02');
+s00p00ln02.animate(twitchFrames, twitchTiming);
 
 // const p00ln03 = document.querySelector('#p00-ln03');
 // p00ln03.animate(breatheFrames, breatheTiming);
@@ -49,15 +50,15 @@ import { breatheFrames, breatheTiming } from './modules/animations/breathe.mjs';
 const allAnimations = document.getAnimations();
 allAnimations.forEach((animation) => animation.pause());
 
-const p00 = document.getElementById('p00');
-const p00Animations = p00.getAnimations({ subtree: true });
+const s00p00 = document.getElementById('s00-p00');
+const s00p00Animations = s00p00.getAnimations({ subtree: true });
 
-for (let i = 0; i < p00Animations.length - 1; i++) {
-	p00Animations[i].onfinish = () => {
-		p00Animations[i + 1].play();
+for (let i = 0; i < s00p00Animations.length - 1; i++) {
+	s00p00Animations[i].onfinish = () => {
+		s00p00Animations[i + 1].play();
 	};
 }
 
-console.log(p00Animations[0]);
+// console.log(p00Animations[0]);
 
-// allAnimations[0].play();
+allAnimations[0].play();
