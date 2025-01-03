@@ -22,7 +22,6 @@ body {
 	font-feature-settings: 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1, 'case' 1, 'liga' 1, 'ss04' 1, 'ss03' 1, 'ss02' 1, 'ss08' 1, 'ss10' 1, 'ss14' 1, 'ss18' 1;
 	font-variation-settings: 'wght' 200, 'wdth' 100, 'ital' 0, 'cont' 0;
 	font-style: normal;
-	/* font-size: clamp(1.6rem, 2.5vw, 2.4rem); */
 	font-size: clamp(1.6rem, 2.46vw, 2.2rem);
 	white-space: nowrap;
 }
@@ -37,7 +36,7 @@ main {
 }
 
 div.paragraph {
-	border: 1px solid gold;
+	border: 1px solid rgb(180, 179, 172);
 	margin: 0;
 	margin-block-end: 50%;
 	content-visibility: auto;
@@ -48,6 +47,7 @@ p {
 	border: 1px dotted dodgerblue;
 	content-visibility: auto;
 	contain-intrinsic-size: auto 70ch 0px;
+	overflow-inline: visible;
 }
 
 #p00 {
