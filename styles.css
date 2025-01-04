@@ -23,34 +23,31 @@ body {
 	font-variation-settings: 'wght' 200, 'wdth' 100, 'ital' 0, 'cont' 0;
 	font-style: normal;
 	font-size: clamp(1.6rem, 2.46vw, 2.2rem);
-	display: grid;
-	place-items: center;
-}
-
-main {
+	width: 65ch;
+	/* min-height: 100%; */
 	white-space: nowrap;
-	/* margin-left: 10ch; */
+	margin: 0 25%;
 }
 
 section.page {
-	/* border: 1px dashed rgb(231, 137, 15); */
-	margin-block-end: 80%;
+	border: 1px dashed rgb(231, 137, 15);
+	/* contain-intrinsic-size: 100vw 100vh; */
 	content-visibility: auto;
-	contain-intrinsic-size: 65ch 0px;
+	min-height: 100vh;
+	/* contain-intrinsic-size: 65ch 0px; */
 }
 
 div.paragraph {
-	/* border: 1px solid rgb(238, 19, 19); */
+	border: 1px solid rgb(238, 19, 19);
 	content-visibility: auto;
+	display: block;
+	/* margin-inline-start: 20%; */
+	/* margin-block-start: 30%; */
 }
 
 p {
-	/* border: 1px dotted dodgerblue; */
-	content-visibility: auto;
-}
-
-#s00-p00 {
-	margin-block-start: 50%;
+	border: 1px solid greenyellow;
+	display: block;
 }
 
 /* #progress {
