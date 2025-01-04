@@ -1,20 +1,6 @@
 import { breatheFrames, breatheTiming } from './modules/animations/breathe.mjs';
 import { twitchFrames, twitchTiming } from './modules/animations/twitch.mjs';
 
-// const progressbar = document.querySelector('#progress');
-// progressbar.style.transformOrigin = '0% 50%';
-// progressbar.animate(
-// 	{
-// 		transform: ['scaleX(0)', 'scaleX(1)'],
-// 	},
-// 	{
-// 		fill: 'forwards',
-// 		timeline: new ScrollTimeline({
-// 			source: document.documentElement,
-// 		}),
-// 	}
-// );
-
 // "wght"   47    200   900
 // "wdth"   60    60   140
 // "ital"   0    0   12

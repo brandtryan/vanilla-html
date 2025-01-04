@@ -8,7 +8,7 @@ export const twitchFrames = [
 		fontVariationSettings: `"cont" 100`,
 	},
 	{
-		fontVariationSettings: `"cont" 30`,
+		fontVariationSettings: `"cont" 0`,
 	},
 ];
 
