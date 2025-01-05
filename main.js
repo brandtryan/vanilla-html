@@ -41,7 +41,6 @@ import {
 } from './modules/pageElements.mjs';
 import { breatheFrames, breatheTiming } from './modules/animations/breathe.mjs';
 import { twitchFrames, twitchTiming } from './modules/animations/twitch.mjs';
-import { page00Animas } from './modules/animations/pageAnimas.mjs';
 // const page00 = document.getElementById('s00');
 // const page01 = document.getElementById('s01');
 // const page02 = document.getElementById('s02');
@@ -136,5 +135,3 @@ s00p00ln02.animate(twitchFrames, twitchTiming);
 // }
 
 // allAnimations[0].play();
-
-console.log(typeof p00Animas);
