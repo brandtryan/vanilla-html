@@ -12,6 +12,7 @@ html {
 }
 
 body {
+	border: 1px solid powderblue;
 	width: 52ch;
 	margin: 0% auto;
 	background: #111;
@@ -23,6 +24,7 @@ body {
 	font-kerning: normal;
 	font-size: clamp(1.6rem, 2.46vw, 2.2rem);
 	text-wrap-mode: nowrap;
+	overflow: visible;
 }
 
 section.page {
@@ -31,15 +33,23 @@ section.page {
 	border: 1px dashed dodgerblue;
 	content-visibility: auto;
 	padding: 38cqb 0;
+	overflow: visible;
 }
 
 div.paragraph {
 	border: 1px solid rgb(238, 19, 19);
 	content-visibility: auto;
+	overflow: visible;
 }
 
 p {
 	border: 1px solid greenyellow;
 	line-height: clamp(1.6rem * 1.5, 2.46vw * 1.5, 2.2rem * 1.5);
 	overflow: visible;
+}
+
+span.word:hover::after {
+	content: '(' attr(id) ')';
+	color: dodgerblue;
+	font-size: 1rem;
 }
