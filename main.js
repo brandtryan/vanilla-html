@@ -372,6 +372,8 @@ divs.forEach((div, i) => {
 			transform: ['translateX(0) rotate(0deg)', 'translateX(80vw) rotate(2700deg)'],
 		},
 		{
+			direction: 'alternate',
+			iterations: Infinity,
 			duration: DURATION,
 			easing: 'ease-in-out',
 			fill: 'both',
