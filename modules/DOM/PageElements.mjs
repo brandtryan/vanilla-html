@@ -1,3 +1,4 @@
+export const allPages = document.getElementsByClassName('page');
 export const page00 = document.getElementById('s00');
 export const page01 = document.getElementById('s01');
 export const page02 = document.getElementById('s02');

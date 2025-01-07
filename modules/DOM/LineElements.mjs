@@ -1,5 +1,6 @@
 import * as ParagraphElements from './ParagraphElements.mjs';
 
+export const allLineElements = document.getElementsByClassName('line');
 export const page00paragraph00Lines = ParagraphElements.page00paragraphs[0].getElementsByClassName('line');
 export const page01paragraph00Lines = ParagraphElements.page01paragraphs[0].getElementsByClassName('line');
 export const page02paragraph00Lines = ParagraphElements.page02paragraphs[0].getElementsByClassName('line');

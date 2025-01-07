@@ -5,7 +5,7 @@ export const crunchFrames = [
 
 export const crunchTiming = {
 	id: 'crunch',
-	delay: 0,
+	delay: 100,
 	direction: 'normal',
 	duration: 1300,
 	endDelay: 0,

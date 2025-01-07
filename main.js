@@ -4,17 +4,18 @@
 // "CONT"   0    100   100
 
 import * as PageElements from './modules/DOM/PageElements.mjs';
-import * as ParagraphElements from './modules/DOM/ParagraphElements.mjs';
-import * as LineElements from './modules/DOM/LineElements.mjs';
 import * as PageAnimas from './modules/DOM/PageAnimas.mjs';
+import * as LineElements from './modules/DOM/LineElements.mjs';
 
 import { crunchFrames, crunchTiming } from './modules/animations/crunch.mjs';
 
-LineElements.page00paragraph00Lines[0].animate(crunchFrames, crunchTiming);
-LineElements.page00paragraph00Lines[1].animate(crunchFrames, crunchTiming);
-LineElements.page00paragraph00Lines[2].animate(crunchFrames, crunchTiming);
+const s00p00ln00_Crunch = LineElements.page00paragraph00Lines[0].animate(crunchFrames, crunchTiming);
+const s00p00ln01_Crunch = LineElements.page00paragraph00Lines[1].animate(crunchFrames, crunchTiming);
+const s00p00ln02_Crunch = LineElements.page00paragraph00Lines[2].animate(crunchFrames, crunchTiming);
 
-PageAnimas.page00Animas.forEach((animation) => animation.pause());
+s00p00ln00_Crunch.pause();
+s00p00ln01_Crunch.pause();
+s00p00ln02_Crunch.pause();
 
 for (let i = 0; i < PageAnimas.page00Animas.length; i++) {
 	PageAnimas.page00Animas[i].onfinish = () => {
@@ -22,7 +23,6 @@ for (let i = 0; i < PageAnimas.page00Animas.length; i++) {
 	};
 }
 
-console.log(PageElements.page00.className);
-console.log(ParagraphElements.page20paragraphs.length);
-console.log(LineElements.page18paragraph00Lines.length);
-console.log(LineElements.page18paragraph01Lines.length);
+console.log(PageAnimas.page00Animas.length);
+
+s00p00ln00_Crunch.play();

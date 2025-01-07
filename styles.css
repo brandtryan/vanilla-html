@@ -27,7 +27,7 @@ body {
 	overflow: visible;
 }
 
-section.page {
+div.page {
 	width: 52ch;
 	min-height: 100vh;
 	border: 1px dashed dodgerblue;
