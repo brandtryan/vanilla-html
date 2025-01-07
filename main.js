@@ -4,18 +4,20 @@
 // "CONT"   0    100   100
 let ln = [];
 
+const temp = document.getElementById('s00');
+
 // Create a range input element
-// const rangeInput = document.createElement('input');
+const rangeInput = document.createElement('input');
 // set the type attribute to "range"
-// rangeInput.setAttribute('type', 'range');
+rangeInput.setAttribute('type', 'range');
 // Set other attributes as needed, such as min, max, and step
-// // rangeInput.setAttribute('value', '0');
-// // rangeInput.setAttribute('min', '0');
-// // rangeInput.setAttribute('max', '100');
-// // rangeInput.setAttribute('step', '1');
-// // rangeInput.setAttribute('id', 'scrub');
-// // Add the input element to the document
-// document.body.insertBefore(rangeInput, temp);
+rangeInput.setAttribute('value', '0');
+rangeInput.setAttribute('min', '0');
+rangeInput.setAttribute('max', '100');
+rangeInput.setAttribute('step', '1');
+rangeInput.setAttribute('id', 'scrub');
+// Add the input element to the document
+document.body.insertBefore(rangeInput, temp);
 
 const wordArray0 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
 const wordArray1 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
@@ -360,7 +362,8 @@ function randomNum(min, max) {
 let divs = Array.from(document.querySelectorAll('.line'));
 let animations = [];
 let isPlaying = true;
-const DURATION = 4000;
+const DURATION = 3500;
+let scrub = document.getElementById('scrub');
 
 //Animate each div... for simplicity, using delays and endDelays to make all animations have same start and end times (end time will be duration + delay + endDelay)
 divs.forEach((div, i) => {
