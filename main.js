@@ -1,3 +1,5 @@
+import { pages, paragraphs, lines, words } from './modules/DOM/elements.mjs';
+
 // "wght"   47    200   900
 // "wdth"   60    60   140
 // "ital"   0    0   12
@@ -19,15 +21,15 @@ rangeInput.setAttribute('id', 'scrub');
 // Add the input element to the document
 document.body.insertBefore(rangeInput, temp);
 
-const wordArray0 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray1 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray2 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray3 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray4 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray5 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray6 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray7 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
-const wordArray8 = document.getElementById('s00-p00-ln00').textContent.split(/(\s+)/);
+const wordArray0 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray1 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray2 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray3 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray4 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray5 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray6 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray7 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
+const wordArray8 = document.getElementById('s00p00ln00').textContent.split(/(\s+)/);
 
 // Create array of words per line from strings
 // const wordArray0 = `My teachers look at me funny when I make weird noises,`.split(/(\s+)/);
@@ -238,8 +240,8 @@ const breathTiming = {
 	iterationComposite: 'replace',
 };
 
-const s00p00ln00w03 = document.getElementById('s00-p00-ln00-w03');
-const s00p00ln00w08 = document.getElementById('s00-p00-ln00-w08');
+const s00p00ln00w03 = document.getElementById('s00p00ln00w03');
+const s00p00ln00w08 = document.getElementById('s00p00ln00w08');
 // Create LINE 0 WORD animations and store the Animation objects in an array
 const line0WordAnimations = [
 	s00p00ln00w03.animate(breathFrames, breathTiming),
@@ -373,7 +375,7 @@ divs.forEach((div, i) => {
 		},
 		{
 			direction: 'alternate',
-			iterations: Infinity,
+			// iterations: Infinity,
 			duration: DURATION,
 			easing: 'ease-in-out',
 			fill: 'both',
@@ -440,3 +442,15 @@ function playAll() {
 		animation.play();
 	});
 }
+
+// const allPagesCollection = document.getElementsByClassName('page');
+// const allPagesArray = Array.from(allPagesCollection);
+// const allPagesIdsArray = Array.from(allPagesCollection).map((page) => page.id);
+
+// let allPages = [...allPagesIdsArray];
+// const [Pages] = [allPagesArray];
+
+console.log(s00);
+console.log(s00p00);
+console.log(s00p00ln00);
+console.log(s00p00ln00w00);
