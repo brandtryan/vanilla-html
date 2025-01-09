@@ -1,4 +1,4 @@
-import { pages, paragraphs, lines, words } from './modules/dom/elements.mjs';
+import { pages, s00Paragraphs, s00Words, s00Lines } from './modules/dom/elements.mjs';
 import { breathFrames, breathTiming } from './modules/animations/breathAnima.mjs';
 import { barkFrames, barkTiming } from './modules/animations/barkAnima.mjs';
 import { overallDuration } from './modules/controlAnimations/time/overallDuration.mjs';
@@ -9,7 +9,7 @@ import { headShakeFrames, headShakeTiming } from './modules/animations/headShake
 
 const linesReadingTimesArray = [];
 const lineAnimations = [];
-const s00Lines = lines.filter((Element) => Element.id.includes('s00p00'));
+// const s00Lines = lines.filter((Element) => Element.id.includes('s00p00'));
 
 const lineWordCounts = s00Lines.map((line) => line.childElementCount);
 

@@ -13,3 +13,7 @@ export const [lines] = [allLinesArray];
 const allWordsCollection = document.getElementsByClassName('word');
 const allWordsArray = Array.from(allWordsCollection);
 export const [words] = [allWordsArray];
+
+export const s00Lines = lines.filter((Element) => Element.id.includes('s00p00'));
+export const s00Paragraphs = paragraphs.filter((Element) => Element.id.includes('s00'));
+export const s00Words = words.filter((Element) => Element.id.includes('s00'));
