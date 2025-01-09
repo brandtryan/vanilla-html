@@ -1,40 +1,6 @@
-import { pages, paragraphs, lines, words } from './modules/DOM/elements.mjs';
-import { randomNum } from './modules/other/randomNum.mjs';
-import { breathFrames, breathTiming } from './modules/animations/breath.mjs';
-import { lineReadingTime } from './modules/time/lineReadingTime.mjs';
-import { setWordAnimaStartTime } from './modules/time/setWordAnimaStartTime.mjs';
-import { pauseAll, playAll, finishAll } from './modules/playerControl/playerControl.mjs';
-import { onFinish } from './modules/onEvent/onFinish.mjs';
-import { overallDuration } from './modules/time/overallDuration.mjs';
-// "wght"   47    200   900
-// "wdth"   60    60   140
-// "ital"   0    0   12
-// "CONT"   0    100   100
-// let ln = [];
+import { pages, paragraphs, lines, words } from '../dom/elements.mjs';
 
-const wordArray0 = s00p00ln00.textContent.split(/(\s+)/);
-const wordArray1 = s00p00ln01.textContent.split(/(\s+)/);
-const wordArray2 = s00p00ln02.textContent.split(/(\s+)/);
-const wordArray3 = s00p00ln03.textContent.split(/(\s+)/);
-const wordArray4 = s00p00ln04.textContent.split(/(\s+)/);
-const wordArray5 = s00p00ln05.textContent.split(/(\s+)/);
-const wordArray6 = s00p00ln06.textContent.split(/(\s+)/);
-const wordArray7 = s00p00ln07.textContent.split(/(\s+)/);
-const wordArray8 = s00p00ln08.textContent.split(/(\s+)/);
-
-//Set duration of line animations based on average reading time
-const lineDuration0 = lineReadingTime(wordArray0);
-const lineDuration1 = lineReadingTime(wordArray1);
-const lineDuration2 = lineReadingTime(wordArray2);
-const lineDuration3 = lineReadingTime(wordArray3);
-const lineDuration4 = lineReadingTime(wordArray4);
-const lineDuration5 = lineReadingTime(wordArray5);
-const lineDuration6 = lineReadingTime(wordArray6);
-const lineDuration7 = lineReadingTime(wordArray7);
-const lineDuration8 = lineReadingTime(wordArray8);
-
-// ANIMATIONS
-
+const page = s00;
 // Create LINE 0 WORD animations and store the Animation objects in an array
 // const line0WordAnimations = [
 // 	s00p00ln00w03.animate(breathFrames, breathTiming),
@@ -106,32 +72,27 @@ const lineDuration8 = lineReadingTime(wordArray8);
 //   });
 // }
 
-let animations = [];
-let isPlaying = true;
-const DURATION = 3500;
+// let animations = [];
+// let isPlaying = true;
+// const DURATION = 3500;
 
 //Animate each div... for simplicity, using delays and endDelays to make all animations have same start and end times (end time will be duration + delay + endDelay)
-lines.forEach((line, i) => {
-	var anim = line.animate(
-		{
-			transform: ['translateX(0) rotate(0deg)', 'translateX(80vw) rotate(2700deg)'],
-		},
-		{
-			direction: 'alternate',
-			// iterations: Infinity,
-			duration: DURATION,
-			easing: 'ease-in-out',
-			fill: 'both',
-			delay: (DURATION / 4) * i,
-			endDelay: DURATION - (DURATION / 4) * i,
-		}
-	);
 
-	animations.push(anim);
-});
+// lines.forEach((line, i) => {
+// 	var anim = line.animate(
+// 		{
+// 			transform: ['translateX(0) rotate(0deg)', 'translateX(80vw) rotate(2700deg)'],
+// 		},
+// 		{
+// 			direction: 'alternate',
+// 			// iterations: Infinity,
+// 			duration: DURATION,
+// 			easing: 'ease-in-out',
+// 			fill: 'both',
+// 			delay: (DURATION / 4) * i,
+// 			endDelay: DURATION - (DURATION / 4) * i,
+// 		}
+// 	);
 
-console.log(s00);
-console.log(s00p00);
-console.log(s00p00ln00);
-console.log(overallDuration(animations[0]));
-console.log(s00p00ln00w00);
+// 	animations.push(anim);
+// });
