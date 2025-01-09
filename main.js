@@ -5,7 +5,7 @@ import { lineReadingTime } from './modules/time/lineReadingTime.mjs';
 import { setWordAnimaStartTime } from './modules/time/setWordAnimaStartTime.mjs';
 import { pauseAll, playAll, finishAll } from './modules/playerControl/playerControl.mjs';
 import { onFinish } from './modules/onEvent/onFinish.mjs';
-import { overall_duration } from './modules/animations/animationControl/overallDuration.mjs';
+import { overallDuration } from './modules/time/overallDuration.mjs';
 // "wght"   47    200   900
 // "wdth"   60    60   140
 // "ital"   0    0   12
@@ -133,5 +133,5 @@ lines.forEach((line, i) => {
 console.log(s00);
 console.log(s00p00);
 console.log(s00p00ln00);
-console.log(overall_duration(s00p00ln00.getAnimations()));
+console.log(overallDuration(animations[0]));
 console.log(s00p00ln00w00);
