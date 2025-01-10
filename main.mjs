@@ -1,29 +1,29 @@
 import { pages, s00Paragraphs, s00Words, s00Lines } from './modules/dom/elements.mjs';
-import { breathFrames, breathTiming } from './modules/animations/breathAnima.mjs';
-import { barkFrames, barkTiming } from './modules/animations/barkAnima.mjs';
 import { overallDuration } from './modules/controlAnimations/time/overallDuration.mjs';
 import { lineReadingTime } from './modules/controlAnimations/time/lineReadingTime.mjs';
 import { setLineAnimaStartTime } from './modules/controlAnimations/time/setLineAnimaStartTime.mjs';
 import { setWordAnimaStartTime } from './modules/controlAnimations/time/setWordAnimaStartTime.mjs';
-import { headShakeFrames, headShakeTiming } from './modules/animations/headShakeAnima.mjs';
+import { animationsPlayer } from './modules/controlAnimations/animationsPlayer.mjs';
 
-const linesReadingTimesArray = [];
-const lineAnimations = [];
-// const s00Lines = lines.filter((Element) => Element.id.includes('s00p00'));
+const player = animationsPlayer(s00p00ln00Animas);
+// player.play();
 
-const lineWordCounts = s00Lines.map((line) => line.childElementCount);
+// const linesReadingTimesArray = [];
+// const lineAnimations = [];
 
-for (let count of lineWordCounts) {
-	let result = lineReadingTime(count);
-	linesReadingTimesArray.push(result);
-}
+// const lineWordCounts = s00Lines.map((line) => line.childElementCount);
 
-for (let line of s00Lines) {
-	line.animate(breathFrames, breathTiming);
-	lineAnimations.push(line.getAnimations());
-}
+// for (let count of lineWordCounts) {
+// 	let result = lineReadingTime(count);
+// 	linesReadingTimesArray.push(result);
+// }
 
-console.log(lineAnimations);
+// for (let line of s00Lines) {
+// 	line.animate(breathFrames, breathTiming);
+// 	lineAnimations.push(line.getAnimations());
+// }
+
+// console.log(nowTimeLine.currentTime);
 
 // Create PAGE animations and store the animation objects in an array
 // const pageAnimations = [s00.animate(headShakeFrames, headShakeTiming)];

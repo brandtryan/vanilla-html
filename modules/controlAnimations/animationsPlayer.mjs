@@ -1,8 +1,4 @@
-export function animationsPlayer(animations, timings) {
-	const timingOptions = timings;
-	for (let i = 0; i < animations.length; i++) {
-		animations.forEach((animation) => animation.effect.updateTiming(timingOptions[i]));
-	}
+export function animationsPlayer(animations) {
 	return Object.freeze({
 		play: function () {
 			animations.forEach((animation) => animation.play());
