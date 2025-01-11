@@ -1,6 +1,4 @@
-// SETUP TO BE USED WITH TOURETTES APP
-
-// DEMO OF WRITABLE PROPERTIES
+// // Animation WRITABLE PROPERTIES
 
 // // currentTime
 // const animaCT = ln0w2.animate(crunchFrames, crunchTiming);
@@ -18,7 +16,6 @@
 // console.log("playbackRate AFTER change = " + animaPR.playbackRate)
 // animaPR.play();
 
-
 // // startTime
 // const animaST = ln0w2.animate(crunchFrames, crunchTiming);
 // animaST.timeline = document.timeline;
@@ -26,8 +23,7 @@
 // animaST.startTime = 1500.0;
 // console.log("startTime SET = " + animaST.startTime);
 
-
-// DEMO OF METHODS
+// // Animation METHODS
 
 // // cancel()
 // const animaCancel = ln0w2.animate(crunchFrames, crunchTiming);

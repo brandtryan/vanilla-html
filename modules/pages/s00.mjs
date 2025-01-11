@@ -1,6 +1,5 @@
-import { pages, paragraphs, lines, words } from '../dom/elements.mjs';
+import { s00Elements } from '../dom/elements.mjs';
 
-const page = s00;
 // Create LINE 0 WORD animations and store the Animation objects in an array
 // const line0WordAnimations = [
 // 	s00p00ln00w03.animate(breathFrames, breathTiming),

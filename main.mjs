@@ -1,11 +1,100 @@
-import { pages, s00Paragraphs, s00Words, s00Lines } from './modules/dom/elements.mjs';
+import { elements, pages, lines, words } from './modules/dom/elements.mjs';
+import { getLineWordCounts } from './modules/controlAnimations/time/getLineWordCounts.mjs';
 import { overallDuration } from './modules/controlAnimations/time/overallDuration.mjs';
 import { lineReadingTime } from './modules/controlAnimations/time/lineReadingTime.mjs';
-import { setLineAnimaStartTime } from './modules/controlAnimations/time/setLineAnimaStartTime.mjs';
-import { setWordAnimaStartTime } from './modules/controlAnimations/time/setWordAnimaStartTime.mjs';
-import { animationsPlayer } from './modules/controlAnimations/animationsPlayer.mjs';
 
-const player = animationsPlayer(s00p00ln00Animas);
+console.log(lineReadingTime(pg00ln00));
+
+// Create array of words per line from strings
+// const s00p00ln00Words = s00p00ln00.filter((line) => line.textContent.includes('s00p00ln00w'));
+// const regex = /\bs?\w*s00p00ln01w\w*\b/;
+// const s00p00ln01Words = words.match(regex);
+// const s00p00ln02Words = lines.filter((line) => line.textContent.includes('s00p00ln02w'));
+// const s00p00ln03Words = lines.filter((line) => line.textContent.includes('s00p00ln03w'));
+// const s00p00ln04Words = lines.filter((line) => line.textContent.includes('s00p00ln04w'));
+// const s00p00ln05Words = lines.filter((line) => line.textContent.includes('s00p00ln05w'));
+// const s00p00ln06Words = lines.filter((line) => line.textContent.includes('s00p00ln06w'));
+// const s00p00ln07Words = lines.filter((line) => line.textContent.includes('s00p00ln07w'));
+// const s00p00ln08Words = lines.filter((line) => line.textContent.includes('s00p00ln08w'));
+
+// console.log(el.s00Line00Words);
+// console.log(el.s00Line01Words);
+// console.log(el.s00Line02Words);
+// console.log(el.s00Line03Words);
+// console.log(el.s00Line04Words);
+// console.log(el.s00Line05Words);
+// console.log(el.s00Line06Words);
+// console.log(el.s00Line07Words);
+// console.log(el.s00Line08Words);
+
+//Set duration of line animations based on average reading time
+// const s00p00ln00Duration = lineReadingTime(s00p00ln00Words);
+// const s00p00ln01Duration = lineReadingTime(s00p00ln01Words);
+// const s00p00ln02Duration = lineReadingTime(s00p00ln02Words);
+// const s00p00ln03Duration = lineReadingTime(s00p00ln03Words);
+// const s00p00ln04Duration = lineReadingTime(s00p00ln04Words);
+// const s00p00ln05Duration = lineReadingTime(s00p00ln05Words);
+// const s00p00ln06Duration = lineReadingTime(s00p00ln06Words);
+// const s00p00ln07Duration = lineReadingTime(s00p00ln07Words);
+// const s00p00ln08Duration = lineReadingTime(s00p00ln08Words);
+
+// // Animations
+
+// const breathframes = [
+// 	{ fontvariationsettings: `"wght" 295, "wdth" 100, "ital" 0, "cont" 0` },
+// 	{ fontvariationsettings: `"wght" 900, "wdth" 140, "ital" 12, "cont" 100` },
+// 	{ fontvariationsettings: `"wght" 295, "wdth" 100, "ital" 0, "cont" 0` },
+// ];
+
+// const breathtiming = {
+// 	delay: 0,
+// 	direction: 'normal',
+// 	duration: s00p00ln00Duration,
+// 	fill: 'none',
+// 	easing: 'cubic-bezier(0.45, 0, 0.55, 1)',
+// 	iterationstart: 0.0,
+// 	iterations: '1',
+// 	composite: 'replace',
+// 	iterationcomposite: 'replace',
+// };
+
+// // Create LINE 0 WORD animations and store the Animation objects in an array
+// const s00p00ln00WordAnimas = [];
+
+// for (const word of s00p00ln00Words) {
+// 	s00p00ln00WordAnimas.push(word.animate(breathframes, breathtiming));
+// }
+
+// console.log(s00p00ln00WordAnimas[0]);
+
+// // // Set duration of each word animation to be reading time divided by number of word animations
+// s00p00ln00WordAnimas.forEach((item) =>
+// 	item.effect.updateTiming({ duration: s00p00ln00Duration / s00p00ln00Words.length })
+// );
+// // Set startTime of each word animation so each starts after the previous animation, fitting to reading time
+// line0WordAnimations[0].startTime = 1000.0;
+// line0WordAnimations[1].startTime = line0WordAnimations[0].startTime + line0Duration / line0WordAnimations.length;
+
+// console.log('Line0_0 overall = ' + overall_duration(line0WordAnimations[0]));
+// console.log('Line0_1 overall = ' + overall_duration(line0WordAnimations[1]));
+
+// // Create LINE 1 WORD animations and store the Animation objects in an array
+// const line1WordAnimations = [ln1w6.animate(breathFrames, breathTiming), ln1w14.animate(breathFrames, breathTiming)];
+
+// // Set duration of each word animation to be reading time divided by number of word animations
+// line1WordAnimations.forEach((item) => item.effect.updateTiming({ duration: line1Duration / 4 }));
+// // Set startTime of each word animation so each starts after the previous animation, fitting to reading time
+// line1WordAnimations[0].startTime = line0Duration + 1000.0;
+// line1WordAnimations[1].startTime = line1WordAnimations[0].startTime + line0Duration / line1WordAnimations.length;
+
+// console.log('Line1_0 overall = ' + overall_duration(line1WordAnimations[0]));
+// console.log('Line1_1 overall = ' + overall_duration(line1WordAnimations[1]));
+
+// // MISC FUNCTIONS
+
+// const animation = sampleElements.map(Element => Element.animate(keyframes, timing));
+
+// const player = animationsPlayer(s00p00ln00Animas);
 // player.play();
 
 // const linesReadingTimesArray = [];
@@ -54,8 +143,8 @@ const player = animationsPlayer(s00p00ln00Animas);
 // // Set duration of each word animation to be reading time divided by number of word animations
 // line0WordAnimations.forEach((item) => item.effect.updateTiming({ duration: lineDuration0 / 2 }));
 // // Set startTime of each word animation so each starts after the previous animation, fitting to reading time
-// setWordAnimaStartTime(line0WordAnimations[0], lineDuration0, wordArray0.length, 10);
-// setWordAnimaStartTime(line0WordAnimations[1], lineDuration0, wordArray0.length, 18);
+// setWordAnimaStartTime(line0WordAnimations[0], lineDuration0, s00p00ln00.length, 10);
+// setWordAnimaStartTime(line0WordAnimations[1], lineDuration0, s00p00ln00.length, 18);
 
 // console.log('Anima0 duration = ' + line0WordAnimations[0].effect.getTiming().duration);
 // console.log('Anima1 duration = ' + line0WordAnimations[1].effect.getTiming().duration);
@@ -64,75 +153,3 @@ const player = animationsPlayer(s00p00ln00Animas);
 // console.log('Line0_0 overall = ' + overall_duration(line0WordAnimations[0]));
 // console.log('Line0_1 overall = ' + overall_duration(line0WordAnimations[1]));
 // console.log('Line Reading Time = ' + lineDuration0);
-
-// MISC FUNCTIONS
-
-//calculates start_time for WORD ANIMATIONS
-// Create PLAYER RACK
-// function animationsPlayer(animations) {
-//   return Object.freeze({
-//     cancel: function () {
-//       animations.forEach((animation) => animation.cancel());
-//     },
-//     finish: function () {
-//       animations.forEach((animation) => animation.finish());
-//     },
-//     pause: function () {
-//       animations.forEach((animation) => animation.pause());
-//     },
-//     persist: function () {
-//       animations.forEach((animation) => animation.persist());
-//     },
-//     play: function () {
-//       animations.forEach((animation) => animation.play());
-//     },
-//     reverse: function () {
-//       animations.forEach((animation) => animation.reverse());
-//     },
-//     updatePlaybackRate: function () {
-//       animations.forEach((animation) => animation.updatePlaybackRate());
-//     },
-//     // currentTime: function (time = 0) {
-//     //   animations.forEach((animation) => animation.currentTime = time);
-//     // },
-//     currentTime: function (time = 0) {
-//       animations.forEach(function (animation) {
-//         if (typeof animation.currentTime === "function") {
-//           animation.currentTime(time);
-//         } else {
-//           animation.currentTime = time;
-//         }
-//       });
-//     },
-//   });
-// }
-
-// let animations = [];
-// let isPlaying = true;
-// const DURATION = 3500;
-
-// //Animate each div... for simplicity, using delays and endDelays to make all animations have same start and end times (end time will be duration + delay + endDelay)
-// lines.forEach((line, i) => {
-// 	var anim = line.animate(
-// 		{
-// 			transform: ['translateX(0) rotate(0deg)', 'translateX(80vw) rotate(2700deg)'],
-// 		},
-// 		{
-// 			direction: 'alternate',
-// 			// iterations: Infinity,
-// 			duration: DURATION,
-// 			easing: 'ease-in-out',
-// 			fill: 'both',
-// 			delay: (DURATION / 4) * i,
-// 			endDelay: DURATION - (DURATION / 4) * i,
-// 		}
-// 	);
-
-// 	animations.push(anim);
-// });
-
-// console.log(s00);
-// console.log(s00p00);
-// console.log(s00p00ln00);
-// console.log(overallDuration(animations[0]));
-// console.log(s00p00ln00w00);

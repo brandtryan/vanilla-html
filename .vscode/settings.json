@@ -1,3 +1,4 @@
 {
-	"editor.fontFamily": "0xProto Nerd Font"
+	"editor.fontFamily": "0xProto Nerd Font",
+	"terminal.integrated.tabs.defaultIcon": "terminal-ubuntu"
 }

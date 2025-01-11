@@ -1,4 +1,4 @@
-// PROPERTIES
+// // PROPERTIES
 
 // // Gets/Sets element being animated by this object. Can be null.
 // KeyframeEffect.target
