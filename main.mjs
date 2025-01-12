@@ -1,8 +1,11 @@
 import { elements, pages, lines, words } from './modules/dom/elements.mjs';
-import { lineReadingTime } from './modules/controlAnimations/time/lineReadingTime.mjs';
+import { lineDurations } from './modules/controlAnimations/lineDurations.mjs';
 
-console.log(lineReadingTime(pg00ln00));
-console.log(pages.length);
+[Object.fromEntries(lineDurations)] = [lineDurations[key]];
+
+console.log(pg00ln00Duration);
+// const pg00ln00Duration = lineDurations.pg00ln00Duration;
+// console.log(pg00ln00Duration);
 
 // Create array of words per line from strings
 // const s00p00ln00Words = s00p00ln00.filter((line) => line.textContent.includes('s00p00ln00w'));
