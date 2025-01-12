@@ -1,5 +1,5 @@
-import { lineReadingTime } from './time/lineReadingTime.mjs';
 import { lines } from '../dom/elements.mjs';
+import { lineReadingTime } from './lineReadingTime.mjs';
 
 function getLineReadingTimes() {
 	return lines.map((line) => lineReadingTime(line));

@@ -1,31 +1,9 @@
 import { elements, pages, lines, words } from './modules/dom/elements.mjs';
 import { lineDurations } from './modules/controlAnimations/lineDurations.mjs';
+import { word_player } from './modules/pages/pg00.mjs';
 
-console.log(pg00ln00Duration);
-// const pg00ln00Duration = lineDurations.pg00ln00Duration;
-// console.log(pg00ln00Duration);
-
-// Create array of words per line from strings
-// const s00p00ln00Words = s00p00ln00.filter((line) => line.textContent.includes('s00p00ln00w'));
-// const regex = /\bs?\w*s00p00ln01w\w*\b/;
-// const s00p00ln01Words = words.match(regex);
-// const s00p00ln02Words = lines.filter((line) => line.textContent.includes('s00p00ln02w'));
-// const s00p00ln03Words = lines.filter((line) => line.textContent.includes('s00p00ln03w'));
-// const s00p00ln04Words = lines.filter((line) => line.textContent.includes('s00p00ln04w'));
-// const s00p00ln05Words = lines.filter((line) => line.textContent.includes('s00p00ln05w'));
-// const s00p00ln06Words = lines.filter((line) => line.textContent.includes('s00p00ln06w'));
-// const s00p00ln07Words = lines.filter((line) => line.textContent.includes('s00p00ln07w'));
-// const s00p00ln08Words = lines.filter((line) => line.textContent.includes('s00p00ln08w'));
-
-// console.log(el.s00Line00Words);
-// console.log(el.s00Line01Words);
-// console.log(el.s00Line02Words);
-// console.log(el.s00Line03Words);
-// console.log(el.s00Line04Words);
-// console.log(el.s00Line05Words);
-// console.log(el.s00Line06Words);
-// console.log(el.s00Line07Words);
-// console.log(el.s00Line08Words);
+console.log(lineDurations.pg00ln00Duration);
+word_player.play();
 
 //Set duration of line animations based on average reading time
 // const s00p00ln00Duration = lineReadingTime(s00p00ln00Words);
@@ -37,26 +15,6 @@ console.log(pg00ln00Duration);
 // const s00p00ln06Duration = lineReadingTime(s00p00ln06Words);
 // const s00p00ln07Duration = lineReadingTime(s00p00ln07Words);
 // const s00p00ln08Duration = lineReadingTime(s00p00ln08Words);
-
-// // Animations
-
-// const breathframes = [
-// 	{ fontvariationsettings: `"wght" 295, "wdth" 100, "ital" 0, "cont" 0` },
-// 	{ fontvariationsettings: `"wght" 900, "wdth" 140, "ital" 12, "cont" 100` },
-// 	{ fontvariationsettings: `"wght" 295, "wdth" 100, "ital" 0, "cont" 0` },
-// ];
-
-// const breathtiming = {
-// 	delay: 0,
-// 	direction: 'normal',
-// 	duration: s00p00ln00Duration,
-// 	fill: 'none',
-// 	easing: 'cubic-bezier(0.45, 0, 0.55, 1)',
-// 	iterationstart: 0.0,
-// 	iterations: '1',
-// 	composite: 'replace',
-// 	iterationcomposite: 'replace',
-// };
 
 // // Create LINE 0 WORD animations and store the Animation objects in an array
 // const s00p00ln00WordAnimas = [];
@@ -153,3 +111,31 @@ console.log(pg00ln00Duration);
 // console.log('Line0_0 overall = ' + overall_duration(line0WordAnimations[0]));
 // console.log('Line0_1 overall = ' + overall_duration(line0WordAnimations[1]));
 // console.log('Line Reading Time = ' + lineDuration0);
+
+// const animationArrays = {
+// 	word: [word_animations],
+// 	line: [line_animations],
+// 	page: [page_animations],
+// };
+
+// // Start animations and store them
+
+// let all_animations = Object.create(null);
+
+// Object.keys(animationArrays).forEach(function (name) {
+// 	all_animations[name] = Array.from(document.querySelectorAll(`[data-channel="${name}"]`)).map(function (element) {
+// 		return element.animate(animationArrays[name]);
+// 	});
+// });
+
+// const word_animations = all_animations.word;
+// const line_animations = all_animations.line;
+// const page_animations = all_animations.page;
+
+// const word_player = animations_player(word_animations);
+// const line_player = animations_player(line_animations);
+// const page_player = animations_player(page_animations);
+
+// word_animations.addEventListener('finish', function () {
+// 	main_player.stop();
+// });
