@@ -13,14 +13,8 @@ export const lineReadingTimesById = lineIds.reduce((acc, id, index) => {
 	return acc;
 }, {});
 
-const lineDurations = {};
+export const lineDurations = {};
 
 for (const [key, value] of Object.entries(lineReadingTimesById)) {
 	lineDurations[key] = value;
 }
-
-for (const lineDuration in lineDurations) {
- `${lineDuration}` = lineDurations[lineDuration];
-}
-
-export { lineDurations };

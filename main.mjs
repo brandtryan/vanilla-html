@@ -1,8 +1,6 @@
 import { elements, pages, lines, words } from './modules/dom/elements.mjs';
 import { lineDurations } from './modules/controlAnimations/lineDurations.mjs';
 
-[Object.fromEntries(lineDurations)] = [lineDurations[key]];
-
 console.log(pg00ln00Duration);
 // const pg00ln00Duration = lineDurations.pg00ln00Duration;
 // console.log(pg00ln00Duration);
