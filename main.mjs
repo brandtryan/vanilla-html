@@ -1,9 +1,8 @@
 import { elements, pages, lines, words } from './modules/dom/elements.mjs';
-import { getLineWordCounts } from './modules/controlAnimations/time/getLineWordCounts.mjs';
-import { overallDuration } from './modules/controlAnimations/time/overallDuration.mjs';
 import { lineReadingTime } from './modules/controlAnimations/time/lineReadingTime.mjs';
 
 console.log(lineReadingTime(pg00ln00));
+console.log(pages.length);
 
 // Create array of words per line from strings
 // const s00p00ln00Words = s00p00ln00.filter((line) => line.textContent.includes('s00p00ln00w'));
