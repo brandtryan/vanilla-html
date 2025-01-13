@@ -1,5 +1,7 @@
 // Controller for a group of animations
+
 export function animations_player(animations) {
+	// Function to call a method on all animations where callback could be any one of the call_on_all below
 	const call_on_all = function (callback) {
 		return function () {
 			animations.forEach(function (element) {
@@ -21,10 +23,12 @@ export function animations_player(animations) {
 	return Object.freeze({
 		play: call_on_all((animation) => animation.play()),
 		pause: call_on_all((animation) => animation.pause()),
+		// current_time: Set the current time of the animation (Seek)
 		current_time: (time = 0) =>
 			call_on_all(function (animation) {
 				animation.currentTime = time;
 			})(),
+		// 'stop' Reset the animation to the beginning and pause
 		stop: call_on_all(function (animation) {
 			animation.pause();
 			animation.currentTime = 0;

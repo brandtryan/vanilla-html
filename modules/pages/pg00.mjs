@@ -1,100 +1,61 @@
 import { pg00Elements } from '../dom/elements.mjs';
 import { animations_player } from '../controlAnimations/animations_player.mjs';
 import { lineDurations } from '../controlAnimations/lineDurations.mjs';
-import breathAnima from '../animations/breathAnima.mjs';
-// // Create LINE 0 WORD animations and store the Animation objects in an array
-const pg00ln00WordAnimations = [];
-const pg00ln01WordAnimations = [];
-const pg00ln02WordAnimations = [];
-const pg00ln03WordAnimations = [];
-const pg00ln04WordAnimations = [];
-const pg00ln05WordAnimations = [];
-const pg00ln06WordAnimations = [];
-const pg00ln07WordAnimations = [];
+import { crunchAnima } from '../animations/crunchAnima.mjs';
 
-const pg00ln00Words = pg00Elements.filter((element) => element.id.includes('pg00ln00wrd'));
-const pg00ln01Words = pg00Elements.filter((element) => element.id.includes('pg00ln01wrd'));
-const pg00ln02Words = pg00Elements.filter((element) => element.id.includes('pg00ln02wrd'));
-const pg00ln03Words = pg00Elements.filter((element) => element.id.includes('pg00ln03wrd'));
-const pg00ln04Words = pg00Elements.filter((element) => element.id.includes('pg00ln04wrd'));
-const pg00ln05Words = pg00Elements.filter((element) => element.id.includes('pg00ln05wrd'));
-const pg00ln06Words = pg00Elements.filter((element) => element.id.includes('pg00ln06wrd'));
-const pg00ln07Words = pg00Elements.filter((element) => element.id.includes('pg00ln07wrd'));
+export const pg00Words = pg00Elements
+	.filter((element) => element.id.includes('wrd'))
+	.filter((element) => element.index % 2 === 0);
 
-for (const word of pg00ln00Words) {
-	pg00ln00WordAnimations.push(word.animate(breathAnima));
-}
+// Create pg00 WORD animations and store the Animation objects in an array
+let word_animations = [crunchAnima];
 
-for (const word of pg00ln01Words) {
-	pg00ln01WordAnimations.push(word.animate(breathAnima));
-}
+export let all_animations = Object.create(null);
 
-for (const word of pg00ln02Words) {
-	pg00ln02WordAnimations.push(word.animate(breathAnima));
-}
+const animationArrays = {
+	word: [word_animations],
+	// line: [line_animations],
+	// page: [page_animations],
+};
 
-for (const word of pg00ln03Words) {
-	pg00ln03WordAnimations.push(word.animate(breathAnima));
-}
+Object.keys(animationArrays).forEach(function (name) {
+	all_animations[name] = pg00Words.map(function (element) {
+		return element.animate(animationArrays[name]);
+	});
+});
 
-for (const word of pg00ln04Words) {
-	pg00ln04WordAnimations.push(word.animate(breathAnima));
-}
+word_animations = all_animations.word;
+// line_animations = all_animations.line;
+// page_animations = all_animations.page;
 
-for (const word of pg00ln05Words) {
-	pg00ln05WordAnimations.push(word.animate(breathAnima));
-}
+export const word_player = animations_player(word_animations);
+// const line_player = animations_player(line_animations);
+// const page_player = animations_player(page_animations);
 
-for (const word of pg00ln06Words) {
-	pg00ln06WordAnimations.push(word.animate(breathAnima));
-}
-
-for (const word of pg00ln07Words) {
-	pg00ln07WordAnimations.push(word.animate(breathAnima));
-}
+// all_animations.addEventListener('finish', function () {
+// 	word_player.stop();
+// });
 
 // Set duration of each word animation to be reading time divided by number of word animations
-pg00ln00WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln00Duration / pg00ln00Words.length })
-);
 
-pg00ln01WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln01Duration / pg00ln01Words.length })
-);
+export const pg00Duration =
+	lineDurations.pg00ln00Duration +
+	lineDurations.pg00ln01Duration +
+	lineDurations.pg00ln02Duration +
+	lineDurations.pg00ln03Duration +
+	lineDurations.pg00ln04Duration +
+	lineDurations.pg00ln05Duration +
+	lineDurations.pg00ln06Duration +
+	lineDurations.pg00ln07Duration;
 
-pg00ln02WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln02Duration / pg00ln02Words.length })
-);
-
-pg00ln03WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln03Duration / pg00ln03Words.length })
-);
-
-pg00ln04WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln04Duration / pg00ln04Words.length })
-);
-
-pg00ln05WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln05Duration / pg00ln05Words.length })
-);
-
-pg00ln06WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln06Duration / pg00ln06Words.length })
-);
-
-pg00ln07WordAnimations.forEach((item) =>
-	item.effect.updateTiming({ duration: lineDurations.pg00ln07Duration / pg00ln07Words.length })
-);
+word_animations.forEach((item) => item.effect.updateTiming({ duration: pg00Duration / pg00Words.length }));
 
 // Set startTime of each word animation so each starts after the previous animation, fitting to reading time
-pg00ln00WordAnimations[0].startTime = 1000.0;
+// word_animations[0].startTime = 1000.0;
 
-for (let i = 1; i < 7; i++) {
-	pg00ln00WordAnimations[i].startTime =
-		pg00ln00WordAnimations[i - 1].startTime +
-		eval(`lineDurations.pg00ln0${i}Duration`) / eval(`pg00ln0${i}Words`).length;
+for (let i = 0; i < word_animations.length; i++) {
+	word_animations[i].startTime = word_animations[i - 1].startTime + pg00Duration / pg00Words.length;
 }
-// line0WordAnimations[1].startTime = line0WordAnimations[0].startTime + line0Duration / line0WordAnimations.length;
 
 // console.log('Line0_0 overall = ' + overall_duration(line0WordAnimations[0]));
 // console.log('Line0_1 overall = ' + overall_duration(line0WordAnimations[1]));
@@ -176,30 +137,3 @@ for (let i = 1; i < 7; i++) {
 // console.log('Line Reading Time = ' + lineDuration0);
 
 // Start animations and store them
-
-let all_animations = Object.create(null);
-
-const animationArrays = {
-	word: [pg00ln00WordAnimations],
-	// word: [word_animations],
-	// line: [line_animations],
-	// page: [page_animations],
-};
-
-Object.keys(animationArrays).forEach(function (name) {
-	all_animations[name] = Array.from(document.querySelectorAll(`[data-channel="${name}"]`)).map(function (element) {
-		return element.animate(animationArrays[name]);
-	});
-});
-
-const word_animations = all_animations.word;
-const line_animations = all_animations.line;
-const page_animations = all_animations.page;
-
-export const word_player = animations_player(word_animations);
-const line_player = animations_player(line_animations);
-const page_player = animations_player(page_animations);
-
-// word_animations.addEventListener('finish', function () {
-// 	main_player.stop();
-// });

@@ -1,9 +1,72 @@
-import { elements, pages, lines, words } from './modules/dom/elements.mjs';
 import { lineDurations } from './modules/controlAnimations/lineDurations.mjs';
-import { word_player } from './modules/pages/pg00.mjs';
+import { pg00Elements } from './modules/dom/elements.mjs';
+import { animations_player } from './modules/controlAnimations/animations_player.mjs';
+import { crunchKeyframes, crunchTiming } from './modules/animations/crunchAnima.mjs';
 
-console.log(lineDurations.pg00ln00Duration);
-word_player.play();
+const pg00Words = pg00Elements.filter((element) => element.id.includes('wrd'));
+  
+// Create pg00 WORD animations and store the Animation objects in an array
+
+let all_animations = Object.create(null);
+let word_animations = [crunchKeyframes, crunchTiming];
+
+const animationArrays = {
+	word: [word_animations],
+	// line: [line_animations],
+	// page: [page_animations],
+};
+
+Object.keys(animationArrays).forEach(function (name) {
+	all_animations[name] = pg00Words.map(function (element) {
+		return element.animate(animationArrays[name]);
+	});
+});
+
+word_animations = all_animations.word;
+
+// line_animations = all_animations.line;
+// page_animations = all_animations.page;
+
+const word_player = animations_player(word_animations);
+// const line_player = animations_player(line_animations);
+// const page_player = animations_player(page_animations);
+
+// all_animations.addEventListener('finish', function () {
+// 	word_player.stop();
+// });
+
+// Set duration of each word animation to be reading time divided by number of word animations
+
+const pg00Duration =
+	lineDurations.pg00ln00Duration +
+	lineDurations.pg00ln01Duration +
+	lineDurations.pg00ln02Duration +
+	lineDurations.pg00ln03Duration +
+	lineDurations.pg00ln04Duration +
+	lineDurations.pg00ln05Duration +
+	lineDurations.pg00ln06Duration +
+	lineDurations.pg00ln07Duration;
+
+console.log(pg00Duration);
+
+// word_animations.forEach((item) => item.effect.updateTiming({ duration: pg00Duration / word_animations.length }));
+word_animations.forEach((item) => item.effect.updateTiming({ duration: 800 }));
+
+// Set startTime of each word animation so each starts after the previous animation, fitting to reading time
+word_animations[0].startTime = 1000.0;
+
+for (let i = 1; i < word_animations.length - 1; i++) {
+	// word_animations[i].startTime = word_animations[i - 1].startTime + pg00Duration / pg00Words.length;
+	word_animations[i].startTime = word_animations[i - 1].startTime + 2000;
+}
+
+console.log(`pg00 Duration = ${pg00Duration}
+             pg00 Words = ${pg00Words.length}`);
+
+console.log(all_animations);
+
+
+// word_player.play();
 
 //Set duration of line animations based on average reading time
 // const s00p00ln00Duration = lineReadingTime(s00p00ln00Words);
